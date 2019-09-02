@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './images/logo.png'
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 class Banner extends React.Component{
     render(){
@@ -21,9 +21,11 @@ class Banner extends React.Component{
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav ml-lg-auto text-center">
                                     <li className="nav-item active  mr-3 mt-lg-0 mt-3">
-                                        <a className="nav-link" href="index.html">Home
+                                        <Router>
+                                        <Link to="/about">Home
                                             <span className="sr-only">(current)</span>
-                                        </a>
+                                        </Link>
+                                        </Router>
                                     </li>
                                     <li className="nav-item mr-3 mt-lg-0 mt-3">
                                         <a className="nav-link" href="about.html">About</a>
