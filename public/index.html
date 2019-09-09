@@ -1,97 +1,39 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-  <title>Brand Haven Consultants</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8" />
-  <meta name="keywords" content="Brand Haven Consultants are seasoned Real Estate and Property management experts" />
-  <script src="https://use.fontawesome.com/0c894d70a3.js"></script>
-  <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous"
-  />
-  <script>
-    addEventListener("load", function () {
-      setTimeout(hideURLbar, 0);
-    }, false);
+    <title>Brand Haven Consultants</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="Brand Haven Consultants are seasoned Real Estate and Property management experts"/>
+    <script src="https://use.fontawesome.com/0c894d70a3.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+    />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-    function hideURLbar() {
-      window.scrollTo(0, 1);
-    }
-  </script>
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+  <!-- google fonts -->
+  <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext" rel="stylesheet">
+  <!-- //google fonts -->
+
 </head>
-  <body>
-   <div id="root"></div>
-  </body>
-<!-- js -->
-<script src="js/jquery-2.2.3.min.js"></script>
-<!-- //js -->
-<!-- FlexSlider-JavaScript -->
-<script defer src="js/jquery.flexslider.js"></script>
-<script type="text/javascript">
+<body>
 
-  $(window).load(function(){
-    $('.flexslider').flexslider({
-      animation: "slide",
-      start: function(slider){
-        $('body').removeClass('loading');
-      }
-    });
-  });
-</script>
-<!-- //FlexSlider-JavaScript -->
-<!-- script for password match -->
-<script>
-  window.onload = function () {
-    document.getElementById("password1").onchange = validatePassword;
-    document.getElementById("password2").onchange = validatePassword;
-  }
+<!--root-->
+<div id="root"></div>
+<!--root-->
 
-  function validatePassword() {
-    var pass2 = document.getElementById("password2").value;
-    var pass1 = document.getElementById("password1").value;
-    if (pass1 != pass2)
-      document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-    else
-      document.getElementById("password2").setCustomValidity('');
-    //empty string means no validation error
-  }
-</script>
-<!-- script for password match -->
-<!-- start-smooth-scrolling -->
-<script src="js/move-top.js"></script>
-<script src="js/easing.js"></script>
-<script>
-  jQuery(document).ready(function ($) {
-    $(".scroll").click(function (event) {
-      event.preventDefault();
-
-      $('html,body').animate({
-        scrollTop: $(this.hash).offset().top
-      }, 1000);
-    });
-  });
-</script>
-<!-- //end-smooth-scrolling -->
-<!-- smooth-scrolling-of-move-up -->
-<script>
-  $(document).ready(function () {
-
-
-    $().UItoTop({
-      easingType: 'easeOutQuart'
-    });
-
-  });
-</script>
-<script src="js/SmoothScroll.min.js"></script>
-<!-- //smooth-scrolling-of-move-up -->
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/bootstrap.js"></script>
 </body>
+
 </html>
 

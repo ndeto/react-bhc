@@ -4,6 +4,6 @@ import App from './App';
 
 
 ReactDOM.render(
-    <App txt="This is text" />,
+    <App />,
     document.getElementById('root')
 );
