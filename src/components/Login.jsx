@@ -11,11 +11,6 @@ class Login extends React.Component {
 
     handleSubmit = async (event) => {
         event.preventDefault();
-        /*const resp = await fetch(`http://localhost:3000/properties`);
-        const data = await resp.json();
-        console.log(data);*/
-        /*this.props.onSubmit(resp.data);
-        this.setState({ userName: '' });*/
 
         const settings = {
             method: 'POST',
@@ -38,7 +33,7 @@ class Login extends React.Component {
             if (fetchResponse.ok) {
                 console.log(data);
                 window.localStorage.setItem('auth', data.auth_token);
-                this.history.push("/properties");
+                this.history.push("/admin/home");
             }
         } catch (e) {
             return e;
