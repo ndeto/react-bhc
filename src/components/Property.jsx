@@ -9,7 +9,7 @@ const Property = (props) =>
                 <h3 className="heading mb-5">Properties</h3>
                 <div className="blog-grids">
                     <div className="row">
-                        {props.properties.map(property => <Item key={property.name} property={property}/>)}
+                        {props.properties.map(property => <Item key={property.name} isAdmin={props.isAdmin} property={property}/>)}
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import S3FileUpload from 'react-s3';
 class AddProperty extends React.Component {
     state = {
         name: null,
-        image: {},
+        image: new Object(),
         id: null
     };
 
@@ -21,10 +21,11 @@ class AddProperty extends React.Component {
 
 
     handleFileUpload = e => {
-        console.log(e.target.files[0]);
         this.setState({
-            image: e.target.files[0],
+            image: e.target.files
         });
+        Array.from(this.state.image).forEach(file => console.log(file));
+
     };
 
     updateImage = async (event) => {
@@ -35,7 +36,7 @@ class AddProperty extends React.Component {
                 'Authorization': window.localStorage.getItem('auth')
             },
             body: JSON.stringify({
-                image: this.state.image
+                image: `https://card17.s3.amazonaws.com/bhc/${this.state.id}`
             })
         };
         try {
@@ -79,17 +80,22 @@ class AddProperty extends React.Component {
             if (fetchResponse.ok) {
                 console.log(data);
                 // S3FileUpload
-                S3FileUpload
-                    .uploadFile(this.state.image, this.config(data['id']))
-                    .then(image_data => {
-                        console.log(image_data);
-                        this.setState({
-                            id: data['id'],
-                            image: image_data['location']
-                        });
-                        this.updateImage();
-                    })
-                    .catch(err => console.error(err));
+                Array.from(this.state.image).forEach(file => {
+
+                    console.log(file);
+                    S3FileUpload
+                        .uploadFile(file, this.config(data['id']))
+                        .then(image_data => {
+                            console.log(image_data);
+                            this.setState({
+                                id: data['id'],
+                            });
+                            this.updateImage();
+                        })
+                        .catch(err => console.error(err));
+                } );
+
+
             }
 
 

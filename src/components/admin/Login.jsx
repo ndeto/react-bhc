@@ -45,8 +45,8 @@ class Login extends React.Component {
         return (
             <>
                 {/*popup for login*/}
-                <div id="popup3" class="popup-effect">
-                    <div class="popup">
+                {/*<div id="popup3" class="popup-effect">*/}
+                {/*    <div class="popup">*/}
                         <div class="login px-sm-4 mx-auto mw-100">
                             <h5 class="text-center mb-4">Login to Estate Town</h5>
                             <h6 class="text-center mb-4" id="error"></h6>
@@ -86,8 +86,8 @@ class Login extends React.Component {
                         </div>
 
                         <a class="close" href="#">&times;</a>
-                    </div>
-                </div>
+                {/*    </div>*/}
+                {/*</div>*/}
                 {/*popup for login*/}
 
             </>
@@ -95,7 +95,6 @@ class Login extends React.Component {
         );
     }
 }
-
 
 
 export default Login

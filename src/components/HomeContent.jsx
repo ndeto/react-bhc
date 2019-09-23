@@ -23,10 +23,24 @@ const HomeContent = () =>
 
                         </div>
                         <div class="col-lg-5 col-md-7 about-text mt-md-0 mt-5">
-                            <h3>Welcome To Our Real Estate Agency Website </h3>
-                            <p class="mt-3">Integer pulvinar leo id viverra feugiat. Pellentesque libero justo, semper at tempus vel, ultrices in ligula. Nulla uter sollicitudin velit. Sed porttitor orci vel ferm semper at vel, ultrices in ligula.</p>
-                            <p class="mt-2">Integer pulvinar leo id viverra feugiat. Pellentesque libero justo, semper at tempus vel, ultrices in ligula. Nulla uter
-                                sollicitudin velit. Sed porttitor orci vel fermentum elit maximus. Curabitur ut turpis massa in condimentum libero. Pellentesque maximus.</p>
+                            <h3>Welcome To BHC</h3>
+                            <p class="mt-3">
+                                <p>Brand Haven Consultants limited was launched back in 2016 to provide real
+                                    estate consultancy services in Kenya and Africa.
+                                    The company offers wide range of real estate services ranging from</p>
+                                <p>1. Estate Agency.</p>
+                                <p>2. Property Management.</p>
+                                <p>3. Valuation.</p>
+                                <p>4. Financial appraisals on real estate projects.</p>
+                                <p>5. Due diligence on property acquisition.</p>
+                                <p>6. Project Management.</p>
+                                <br/><b>Values:</b><br/>
+                                To leverage real estate investments to build wealth in Africa
+                                <br/><br/><b>Mission:</b><br/>
+                                To be the lead real estate advisors offering technological and feasible advice to
+                                our clients.
+                            </p>
+
                         </div>
                         <div class="col-lg-4 col-md-6 about-img">
                             <img src={require("./../images/about.png")} alt="" class="img-fluid"/>

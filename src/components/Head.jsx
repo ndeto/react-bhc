@@ -9,7 +9,7 @@ const Head = (props) =>
             <header className="py-4">
                 <div className="container">
                     <div id="logo">
-                        <h1><a href="index.html"><span className="fa fa-home" aria-hidden="true"></span> Estate Town</a>
+                        <h1><a href="index.html"><span className="fa fa-home" aria-hidden="true"></span> Brand Haven Consultants</a>
                         </h1>
                     </div>
                     {/*nav*/}
