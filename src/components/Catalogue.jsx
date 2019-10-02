@@ -24,7 +24,7 @@ function Catalogue() {
 
 
     const fetchProperties = async () => {
-        const data = await fetch('https://bhcapi.herokuapp.com', settings);
+        const data = await fetch('https://bhcapi.herokuapp.com/properties', settings);
         const properties = await data.json();
         if (data.ok) {
             setProperties(properties);
