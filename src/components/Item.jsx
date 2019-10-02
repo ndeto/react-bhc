@@ -1,10 +1,10 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 
 const Item = (props) => {
 
     const property = props.property;
-
     return (
         <>
             {/*property grid */}
@@ -15,7 +15,8 @@ const Item = (props) => {
                         <img src={property.image} alt={property.name} className="card-img-bottom"/>
                     </div>
                     <div className="detail">
-                        <h4 className="title mb-2"><a href="contact.html">{property.name} : Kes {property.price}</a></h4>
+                        <h4 className="title mb-2"><a href="contact.html">{property.name} : Kes {property.price}</a>
+                        </h4>
                         <ul className="facilities-list clearfix">
                             <li>
                                 <span className="fa fa-bed"></span> 3 Bedrooms
@@ -31,12 +32,19 @@ const Item = (props) => {
                             </li>
                         </ul>
                         <p className="mt-2">{property.description}</p>
+                        {props.isAdmin ? <EditProperty id={property.id}/>: ""}
+
+
                     </div>
                 </div>
             </div>
-            {/*/property grid*/}
+
         </>
     )
+}
+
+const EditProperty = (props) => {
+    return <Link to={`property/${props.id}/edit`} >Edit</Link>
 }
 
 

@@ -26,7 +26,7 @@ class Login extends React.Component {
             })
         };
         try {
-            const fetchResponse = await fetch('http://localhost:3000/auth/login', settings);
+            const fetchResponse = await fetch('https://bhcapi.herokuapp.com', settings);
             const data = await fetchResponse.json();
             if (!fetchResponse.ok) {
                 alert(fetchResponse.statusText);

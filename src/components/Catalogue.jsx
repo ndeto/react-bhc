@@ -6,19 +6,6 @@ import Head from "./Head";
 import Footer from "./Footer";
 
 
-/*const testData = [{
-    "name": "The Villas",
-    "price": 1000000,
-    "location": "Ruiru"
-},
-    {
-        "name": "The Good Villas",
-        "price": 10000000,
-        "location": "Lavington"
-    }
-];*/
-
-
 function Catalogue() {
 
     useEffect(() => {
@@ -37,7 +24,7 @@ function Catalogue() {
 
 
     const fetchProperties = async () => {
-        const data = await fetch('http://localhost:3000/properties', settings);
+        const data = await fetch('https://bhcapi.herokuapp.com', settings);
         const properties = await data.json();
         if (data.ok) {
             setProperties(properties);
@@ -49,7 +36,7 @@ function Catalogue() {
             <Head/>
             <Banner bannertype={"banner inner-banner"}/>
             <Filters/>
-            <Property properties={properties}/>
+            <Property properties={properties} isAdmin={false}/>
             <Footer/>
         </>
     )
